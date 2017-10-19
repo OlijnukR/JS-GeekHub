@@ -1,0 +1,28 @@
+div {
+    background-color: aqua;
+    border: solid 1px black;
+    padding: 10px;
+    margin: 10px 0;
+}
+.flex {
+    display: inline-flex;
+    width: 75%;
+}
+.container_1 {
+    margin: 10px;
+    display: flex;
+    flex-grow: 1;
+    height: 150px;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.container_drop {
+    margin: 10px;
+    height: 80%;
+    width: 25%;
+}
+.container_vertical {
+    height: 20%;
+    width: 55%;
+}
