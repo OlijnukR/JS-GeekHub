@@ -9,10 +9,7 @@ div {
     flex-direction: row;
     flex-wrap: wrap;     /*эти две строчки можно указать одной flex-flow: row wrap;  */
     justify-content: space-around;
-    /* align-content: space-around;*/
     padding: 10px;
-    /*height: 300px;
-    width: 95%;*/
 }
 .main_container {
     flex-grow: 1;
@@ -20,19 +17,8 @@ div {
 }
 .lateral_container {
     width: 300px;
-    /*height: 100%;
-    margin: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
 }
 .footer_container {
     width: 100%;
     margin-top: 10px;
-    /*width: 98%;
-    height: 10%;
-    margin: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
 }
