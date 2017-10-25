@@ -9,7 +9,6 @@
     <li><p>Функция которая возвращает количество переданых аргументов</p>
             <script type="text/javascript">
                 function sum (x,y){
-                    sum=x+y;
                 }
                 var z=sum.length;
                 document.write(z);
@@ -19,29 +18,22 @@
     <li>
         <p>Функция ввозвращающая количество аргументов, которые являются строками</p>
         <script type="text/javascript">
-            function sum (){
-                for (i = 0; i < 5; i++)
-                    arr[i] = prompt("Введите " + (i + 1) + "-ое число");
+            function sum(x,y,z) {                                   //создали функцию и задали ей аргументы
+                var arg=0;                                          //создаём переменную которая будет увеличиватся на количество аргументов-строк (при их наличи)
+                for (var i = 0; i<arguments.length; i++){           //создаём цикл который перебирает количество аргументов
+                    if (typeof arguments[i] === "string") arg++;    //с помощью условного оператора проверяем каждый из перебираемых аргуменьов на равенство "строке"
+                }                                                   // и в случае совбадения увеличиваем переменную arg на один
+                    document.write(arg + " ");                      //выводим на экран каждое приплюсовывание, что даст нам в результате количество строк
             }
-            var z=sum.length;
-            document.write(z);
         </script>
     </li>
+    <hr>
+    <li>функция которая возвращает сумму значений всех переданных аргументов</li>
+    <script type="text/javascript">
+
+    </script>
 </ol>
 
-
-<br><hr><hr>
-<form name="one" action="script/request.php" method="post">
-<p>Поле для ввода</p>
-<input type="text" name="arguments" value="">
-</form>
-
-<script type="text/javascript">
-    var arr = new Array();
-        for (i = 0; i < 5; i++)
-            arr[i] = prompt("Введите " + (i + 1) + "-ое число");
-        for (i = 0; i < arr.length; i++)
-            document.write(arr[i]);
-</script>
 </body>
 </html>
+
