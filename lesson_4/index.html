@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>регулярные выражения</title>
+</head>
+<body>
+
+<h2>Задача сделать так чтоб при вводе слов JavaScript автоматически ставилась галочка в checkbox</h2>
+<p>вариант 1</p>
+<form name="my_course" action="" methot="post">
+<p>Введите название курса на котором вы учитесь</p>
+<input type="text"/>
+<input type="checkbox"/><a>ответ принят</a>
+<script type="text/javascript">
+    jQuery('input[type="text"]').on('keyup', function (e) {
+        if (e.target.value === 'JavaScript') {
+            jQuery('input[type="checkbox"]').prop('checked', true);
+        }
+    });
+</script>
+</form>
+
+<p>вариант 2 (регулярные выражения)</p>
+<form name="language" method="get">
+    <input type="text" name="text" value="">
+    <input type="checkbox" name="test_ok" value="ok">
+<script>
+    jQuery(function() {
+        jQuery('input[name="text"]').on('keyup', function () {
+            if (jQuery(this).val()==='JavaScript'){
+                jQuery('input[name="test_ok"]').prop('checked', true);
+            }
+            else{
+                jQuery('input[name="test_ok"]').prop('checked', false);
+            }
+        });
+    });
+</script>
+</form>
+<p>вариант 3  -//- </p>
+<form name="language" method="get">
+    <input type="text" name="text" value="">
+    <input type="checkbox" name="test_ok" value="ok">
+</form>
+<script>
+    $(document).ready(function(){
+        jQuery('input[type="text"]').on('keyup', function (e) {
+            var rule = /^JavaScript$/;
+            rule.test(e.target.value);
+            if (rule.test(e.target.value) === true) {
+                jQuery('input[type="checkbox"]').prop('checked', true);
+            }
+        });
+    });
+</script>
+<h2>что не так????????? почему ничто не работает??</h2>
+</body>
+</html>
